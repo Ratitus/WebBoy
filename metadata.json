@@ -1,0 +1,5 @@
+{
+  "name": "WebBoy Emulator",
+  "description": "A web-based GameBoy emulator. Drag and drop .gb files to play.",
+  "requestFramePermissions": []
+}
