@@ -1,116 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="theme-color" content="#09090b" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>GameBoy Web - Ratitus</title>
-    <style>
-        /* Estil base adaptatiu */
-        body { 
-            background-color: #09090b; 
-            color: white; 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            margin: 0; 
-            display: flex; 
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        .main-wrapper {
-            width: 100%;
-            max-width: 600px; /* Mida ideal per a PC i Tauleta */
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #root { width: 100%; }
-
-        /* Biblioteca estil "Grid" */
-        .library-section {
-            width: 100%;
-            margin-top: 25px;
-            background: #18181b;
-            border-radius: 15px;
-            padding: 15px;
-            box-sizing: border-box;
-            border: 1px solid #27272a;
-        }
-
-        h3 { 
-            font-size: 14px; 
-            color: #a1a1aa; 
-            text-transform: uppercase; 
-            margin-bottom: 15px; 
-            text-align: left;
-            padding-left: 5px;
-        }
-
-        .grid-jocs {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 columnes al mòbil */
-            gap: 12px;
-        }
-
-        /* Estil de les targetes de joc */
-        .card-joc {
-            background: #27272a;
-            padding: 15px;
-            border-radius: 10px;
-            text-decoration: none;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            transition: transform 0.2s, background 0.2s;
-            border: 1px solid transparent;
-        }
-
-        .card-joc:hover {
-            background: #3f3f46;
-            transform: translateY(-3px);
-            border-color: #52525b;
-        }
-
-        .icona { font-size: 24px; }
-        .titol { font-size: 13px; font-weight: 600; text-align: center; }
-        .info { font-size: 10px; color: #a1a1aa; }
-
-        /* Ajust per a PC (3 columnes si hi ha espai) */
-        @media (min-width: 500px) {
-            .grid-jocs { grid-template-columns: repeat(3, 1fr); }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="main-wrapper">
-        <div id="root"></div>
-
-        <div class="library-section">
-            <h3>📖 La teva Biblioteca</h3>
-            <div class="grid-jocs">
-                
-                <a href="/aventura%20sin%20conexi%C3%B3n%20de%20dinosaurios.gb" download class="card-joc">
-                    <span class="icona">🦖</span>
-                    <span class="titol">Dino Adventure</span>
-                    <span class="info">Descregar GB</span>
-                </a>
-
-                <a href="/sheepitup.gb" download class="card-joc">
-                    <span class="icona">🐑</span>
-                    <span class="titol">Sheep It Up!</span>
-                    <span class="info">Descregar GB</span>
-                </a>
-
-            </div>
-        </div>
-    </div>
-
-    <script type="module" src="/src/main.tsx"></script>
-</body>
-</html>
+<!doctype html>
+<HTML idioma="en">
+  <cabeza>
+    <meta juego de caracteres="UTF-8"/>
+    <meta nombre="ventana gráfica" contenido="ancho=ancho del dispositivo, escala inicial=1.0, escala máxima=1.0, escalable por el usuario=no"/>
+    <meta nombre="color del tema" contenido="#09090b"/>
+    <enlace relación="manifiesto" href="/manifest.json"/>
+    <título>GameBoy Web</título>
+  </cabeza>
+  <cuerpo>
+    <división identificación="raíz"></división>
+    <guion tipo="módulo" origen="/src/main.tsx"></guion>
+  </cuerpo>
+</HTML>
