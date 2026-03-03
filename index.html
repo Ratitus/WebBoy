@@ -7,27 +7,69 @@
     <link rel="manifest" href="/manifest.json" />
     <title>GameBoy Web - Ratitus</title>
     <style>
-        body { background-color: #09090b; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
-        .botons-contenidor { margin-top: 30px; display: flex; flex-direction: column; gap: 15px; align-items: center; }
-        .boto-descarga { padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; color: white; min-width: 250px; }
-        .dino { background-color: #28a745; }
-        .sheep { background-color: #007bff; }
+        /* Estil per a que tota la web sigui fosca i neta */
+        body { 
+            background-color: #09090b; 
+            color: white; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Contenidor per als botons: un al costat de l'altre */
+        .botons-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-bottom: 30px;
+        }
+
+        /* Estil dels botons tipus "píndola" */
+        .boto-joc {
+            padding: 10px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            border-radius: 50px;
+            transition: transform 0.2s, opacity 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .boto-joc:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        /* Colors personalitzats */
+        .dino { background-color: #2e7d32; border: 1px solid #4caf50; }
+        .sheep { background-color: #1565c0; border: 1px solid #2196f3; }
+        
+        h3 { font-size: 12px; color: #71717a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
     <div id="root"></div>
 
-    <div class="botons-contenidor">
-        <h2>📥 Descarrega els jocs (Vàlid)</h2>
-        
-        <a href="/aventura%20sin%20conexi%C3%B3n%20de%20dinosaurios.gb" download class="boto-descarga dino">
-            🕹️ Descarrega Aventura Dino
-        </a>
+    <div style="margin-top: 20px;">
+        <h3>Biblioteca de Jocs Lliures</h3>
+        <div class="botons-container">
+            <a href="/aventura%20sin%20conexi%C3%B3n%20de%20dinosaurios.gb" download class="boto-joc dino">
+                <span>🦖</span> Dino Adventure
+            </a>
 
-        <a href="/sheepitup.gb" download class="boto-descarga sheep">
-            🕹️ Descarrega Sheep It Up!
-        </a>
+            <a href="/sheepitup.gb" download class="boto-joc sheep">
+                <span>🐑</span> Sheep It Up!
+            </a>
+        </div>
     </div>
 
     <script type="module" src="/src/main.tsx"></script>
