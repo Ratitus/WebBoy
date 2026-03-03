@@ -1,15 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#09090b" />
     <link rel="manifest" href="/manifest.json" />
-    <title>GameBoy Web</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+    <title>GameBoy Web - Ratitus</title>
+    <style>
+        body { background-color: #09090b; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
+        .botons-contenidor { margin-top: 30px; display: flex; flex-direction: column; gap: 15px; align-items: center; }
+        .boto-descarga { padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; color: white; min-width: 250px; }
+        .dino { background-color: #28a745; }
+        .sheep { background-color: #007bff; }
+    </style>
+</head>
+<body>
 
+    <div id="root"></div>
+
+    <div class="botons-contenidor">
+        <h2>📥 Descarrega els jocs (Vàlid)</h2>
+        
+        <a href="/aventura%20sin%20conexi%C3%B3n%20de%20dinosaurios.gb" download class="boto-descarga dino">
+            🕹️ Descarrega Aventura Dino
+        </a>
+
+        <a href="/sheepitup.gb" download class="boto-descarga sheep">
+            🕹️ Descarrega Sheep It Up!
+        </a>
+    </div>
+
+    <script type="module" src="/src/main.tsx"></script>
+
+</body>
+</html>
